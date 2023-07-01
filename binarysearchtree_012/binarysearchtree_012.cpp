@@ -85,10 +85,10 @@ public:
 			inorder(ptr->rightchild);
 		}
 	}
-};
+
 void preorder(Node* ptr)
 {
-	if (ROOT == NULL)
+	if (ptr == NULL)
 	{
 		cout << "Tree is empty" << endl;
 		return;
@@ -97,15 +97,33 @@ void preorder(Node* ptr)
 	{
 		cout << ptr->info << " ";
 		preorder(ptr->leftchild);
-		preorder(ptr->rightchild)
+		preorder(ptr->rightchild);
 	}
 }
 
 void postorder(Node* ptr)
 {
 	// Performs the postorder traversal of the tree
-	if (ROOT == NULL)
+	if (ptr == NULL)
 	{
 		cout << "Tree is empty" << endl;
+		return;
+	}
+	if (ptr != NULL)
+	{
+		postorder(ptr->leftchild);
+		postorder(ptr->rightchild);
+		cout << ptr->info << " ";
+	}
+}
+};
+
+int main()
+{
+	BinaryTree obj;
+	while (true)
+	{
+		cout << "\nMenu" << endl;
+		cout << "1. Implement insert operation" << endl;
 	}
 }
