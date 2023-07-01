@@ -100,3 +100,12 @@ void preorder(Node* ptr)
 		preorder(ptr->rightchild)
 	}
 }
+
+void postorder(Node* ptr)
+{
+	// Performs the postorder traversal of the tree
+	if (ROOT == NULL)
+	{
+		cout << "Tree is empty" << endl;
+	}
+}
